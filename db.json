@@ -1,0 +1,74 @@
+{
+    "badges": {
+      "badge1": {
+        "name": "Badge 1",
+        "description": "This is the first badge",
+        "image": "https://example.com/badge1.png"
+      },
+      "badge2": {
+        "name": "Badge 2",
+        "description": "This is the second badge",
+        "image": "https://example.com/badge2.png"
+      }
+    },
+    
+    "events": {
+      "event1": {
+        "name": "Event 1",
+        "description": "This is the first event"
+      },
+      "event2": {
+        "name": "Event 2",
+        "description": "This is the second event"
+      },
+      "event3": {
+        "name": "Event 3",
+        "description": "This is the second event"
+      },
+      "event4": {
+        "name": "Event 4",
+        "description": "This is the second event"
+      },
+      "event5": {
+        "name": "Event 5",
+        "description": "This is the second event"
+      }
+    },
+    
+    "users": {
+      "0njpdslpTmapOxr0zbRHlza7GSU2": {
+        "name": "test",
+        "email": "test@neki.com",
+        "badges": {
+          "badge1": true,
+          "badge2": true
+        },
+        "events": {
+          "event1": true,
+          "event3": true
+        }
+      },
+      "JNhSPnXgH5hi3TyA8QnVYhrN4lh2": {
+        "name": "amar",
+        "email": "amar.2608@hotmail.com",
+        "badges": {
+          "badge2": true,
+          "badge3": true
+        },
+        "events": {
+          "event2": true,
+          "event4": true
+        }
+      },
+      "BKSh8hnycUa8kAJFWdpYKKNeRoS2": {
+        "name": "amarAdmin",
+        "email": "amar.ibrahimovic0706@gmail.com",
+        "admin": true
+      },
+      "pVrQH4yIJ7Y39NIjfIDMGFQQDWv2": {
+        "name": "admin",
+        "email": "admin@gmail.com",
+        "admin" : true
+      }
+    }
+}

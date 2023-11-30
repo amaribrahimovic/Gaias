@@ -1,0 +1,92 @@
+{
+  "badges": {
+    "badge1": {
+      "name": "Badge 1",
+      "description": "This is the first badge",
+      "image": "https://example.com/badge1.png",
+      "criteria": "Earn 10 points"
+    },
+    "badge2": {
+      "name": "Badge 2",
+      "description": "This is the second badge",
+      "image": "https://example.com/badge2.png",
+      "criteria": "Attend 5 events"
+    },
+    ...
+  }
+}
+
+{
+  "events": {
+    "event1": {
+      "name": "Event 1",
+      "description": "This is the first event",
+      "date": "2023-04-01",
+      "time": "14:00",
+      "location": "123 Main St"
+    },
+    "event2": {
+      "name": "Event 2",
+      "description": "This is the second event",
+      "date": "2023-04-05",
+      "time": "18:00",
+      "location": "456 Elm St"
+    },
+    ...
+  }
+}
+
+{
+  "users": {
+    "user1": {
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "badges": {
+        "badge1": true,
+        "badge2": true
+      },
+      "events": {
+        "event1": true,
+        "event3": true
+      }
+    },
+    "user2": {
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "badges": {
+        "badge2": true,
+        "badge3": true
+      },
+      "events": {
+        "event2": true,
+        "event4": true
+      }
+    },
+    ...
+  }
+}
+
+
+//
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
+
+// Initialize Firebase
+const firebaseConfig = {
+  // Your Firebase config here
+};
+firebase.initializeApp(firebaseConfig);
+
+// Get the currently logged-in user's UID
+const currentUser = firebase.auth().currentUser;
+const uid = currentUser.uid;
+
+// Reference to the logged-in user's data in the users collection
+const userRef = firebase.database().ref(`users/${uid}`);
+
+// Listen for changes to the logged-in user's data
+userRef.on('value', (snapshot) => {
+  const userData = snapshot.val();
+  console.log(userData);
+});
